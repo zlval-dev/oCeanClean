@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollReport">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/LayoutReport">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="casual"
+        android:text="Report Litter"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@id/textView2"
+        android:layout_marginTop="50dp"
+        android:layout_height="350dp"
+        tools:context=".ReportActivity"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="75px"
+        android:layout_alignBottom="@id/map"
+        android:layout_marginBottom="-60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="75dp" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@id/spinner"
+        android:layout_marginTop="55dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/insert_photo"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/separator"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btnPhoto"
+                android:id="@+id/separator1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/separator1"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="Comments/Notes"
+                android:textSize="18dp"
+                android:fontFamily="casual"
+                android:id="@+id/textViewComment"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/separator"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/textViewComment"
+                android:id="@+id/seperator2"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:maxLength="300"
+        android:layout_below="@+id/seperator2"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:id="@+id/etDescription"
+        android:layout_alignEnd="@+id/btnConfirmReport"
+        android:layout_alignStart="@+id/btnConfirmReport"
+        android:textSize="14dp"
+        android:gravity="top|left"/>
+
+            <Button
+                android:layout_marginTop="25dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/etDescription"
+                android:background="@drawable/background_main_button"
+                android:text="Confirm"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/btnConfirmReport"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_alignTop="@id/textView2"
+                android:layout_marginTop="50dp"
+                android:layout_height="350dp"
+                tools:context=".ReportActivity"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="#00000000"
+                android:id="@+id/transparent_image"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
